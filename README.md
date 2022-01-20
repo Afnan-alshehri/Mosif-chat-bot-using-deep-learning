@@ -1,14 +1,17 @@
-# Boby ChatBot 
+# Mosif_ChatBot_DL
 
-<img src ="https://blog.businessdecision.com/wp-content/uploads/2020/06/chatbot-not-just-chatbot-835x400-1.jpg" 
-width="500">
 
 ## Descraption
 
 First aid is the provision of initial care for an illness or injury, usually performed by a non-expert person to a sick or injured person until definitive medical treatment can be accessed by a professional
 
-This chatbot his name Boby, He is helps a person to know medical treatment and explains to him the methods of treatment for the injury.
+This chatbot his name mosif, He is helps a person to know medical treatment and explains to him the methods of treatment for the injury.
 
+
+## Goals
+
+-  Help the patient quickly from chatbot "mosif"
+- The Quick answer when someone an injury occurs
 
 
 ## Data
@@ -20,10 +23,10 @@ This chatbot his name Boby, He is helps a person to know medical treatment and e
 words to describe the condition of the injured person
 
 - The second is Response:
-Answer for a sick person or injured from chatbot BoBy 
+Answer for a sick person or injured from chatbot 
 
 - The third is patterns:
-Questions ask the paramedic, Bobby
+Questions from the chatbot mosif.  
 
 ## Tools
 
