@@ -1,7 +1,7 @@
 # Mosif_ChatBot_DL
 
 <img src ="https://blog.businessdecision.com/wp-content/uploads/2020/06/chatbot-not-just-chatbot-835x400-1.jpg" 
-width="500">
+width="900">
 
 
 
