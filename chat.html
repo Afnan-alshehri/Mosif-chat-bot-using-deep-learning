@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+  <meta charset="UTF-8">
+  <meta author="lmico">
+  <title>MOSIF</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css')}}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body >
+
+  <section>
+  <div class="card">
+
+ 
+
+    <div class="">
+  <div class="chat">
+    <div class="chat-title">
+      <h2> MoSiF ChatBot</h2>
+    </div>
+    <div class="messages" id="chatbox">
+      <div class="messages-content"></div>
+    </div>
+    <div class="message-box" id="userInput">
+      <textarea type="text"id="textInput"    class="message-input" placeholder="Type message..."></textarea>
+      <button type="submit" class="message-submit" > SEND</button>
+    </div>
+  </div>
+  
+    </div>
+  </div>
+  </section>
+
+            <script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("chatbox").style.top = "0";
+  } else {
+    document.getElementById("chatbox").style.top = "-50px";
+  }
+}
+
+
+                        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+
+        </script>
+  
+</body>
+</html>

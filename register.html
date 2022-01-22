@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+  <meta charset="UTF-8">
+  <title>MOSIF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body >
+
+
+  <section>
+        <div class="card">
+          <div class="face">
+            <h3>MOSIF </h3>
+            <img src="{{ url_for('static', filename='../static/imgs/mosif.png')}}" alt="mosif" class="img2"> 
+            <p> Welcome ! <br> Please enter to sign in:</p>
+            <div class="group">
+              <input id="name" placeholder="Your Name.." type="text" aria-label="Name"  class="input" class="username"  data-type="Name" required> 
+              <br> 
+              <input id="number" placeholder="Phone Number.." type="number" aria-label="Name"  class="input" data-type="Name" required>
+            </div>
+            <div class="hr"></div>
+            <div class="group">
+              <a href="{{url_for('home')}}" class="button2">  Submit </a>
+
+            </div>
+
+            <div class="foot-lnk">
+          
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+  
+
+</body>
+</html>
